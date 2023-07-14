@@ -1,0 +1,39 @@
+Q8.What is collision in HashMap?
+
+
+
+
+ANSWER:
+
+
+
+
+In Java, a HashMap is a data structure that stores key-value pairs and provides fast retrieval of values based on their associated keys. A collision in a HashMap occurs when two or more keys hash to the same bucket or index in the underlying array used for storage.
+
+Here's a more detailed explanation of collisions in HashMap:
+
+1. Hashing:
+   - HashMap uses hashing to determine the index or bucket where a key-value pair should be stored in the underlying array.
+   - The hashCode() method of the key is called to calculate a hash code, which is an integer value.
+   - The hash code is then used to calculate the index in the array using the modulo operation (% array length).
+
+2. Collisions:
+   - Since the number of possible hash codes is generally larger than the number of buckets in the array, collisions are bound to occur.
+   - A collision happens when two or more keys generate the same hash code and map to the same index in the array.
+   - When a collision occurs, the HashMap needs a way to handle storing multiple key-value pairs at the same index.
+
+3. Handling Collisions: HashMap uses a technique called "chaining" to handle collisions. Here's how it works:
+   - Each index in the array holds a linked list or a chain of nodes.
+   - When a collision occurs, a new node containing the key-value pair is added to the linked list at the corresponding index.
+   - This allows multiple key-value pairs with the same hash code to coexist at the same index.
+
+4. Retrieving Values:
+   - When retrieving a value from a HashMap, the hash code of the key is calculated.
+   - The calculated hash code is used to find the corresponding index in the array.
+   - If there are multiple key-value pairs at the same index (i.e., a collision occurred), the linked list is traversed to find the matching key and retrieve its associated value.
+
+5. Impact on Performance:
+   - Collisions can impact the performance of a HashMap. As the number of collisions increases, the length of the linked lists grows, and the time complexity of operations like insertion and retrieval can degrade from O(1) to O(n), where n is the number of key-value pairs in the linked list.
+   - To maintain good performance, it is important to minimize collisions by choosing a good hash function and ensuring a balanced distribution of keys.
+
+Overall, collisions in a HashMap occur when multiple keys hash to the same index in the underlying array. HashMap handles collisions using chaining, where linked lists are used to store multiple key-value pairs at the same index. By managing collisions efficiently, HashMap provides fast key-value retrieval even in the presence of collisions.

@@ -1,0 +1,39 @@
+Q10.Define LinkedHashMap in Java
+
+
+
+
+ANSWER:
+
+
+
+
+
+In Java, LinkedHashMap is a class that extends the HashMap class and implements the Map interface. It is a variation of the HashMap that maintains a predictable iteration order of its elements, based on the order of insertion or on a specified access order.
+
+Here are the key characteristics and features of LinkedHashMap:
+
+1. Order of Iteration: LinkedHashMap maintains the order of elements according to their insertion order. When iterating over the elements using methods like `keySet()`, `entrySet()`, or `values()`, the elements are returned in the order they were originally inserted.
+
+2. Optional Access Order: In addition to insertion order, LinkedHashMap also supports an access order mode. In this mode, the LinkedHashMap keeps track of the access history of its elements. Whenever an element is accessed (via get(), put(), or other access-related methods), it is moved to the end of the iteration order. This allows LinkedHashMap to act as a cache, with the most recently accessed elements at the end for potential removal.
+
+3. Null Keys and Values: Like HashMap, LinkedHashMap allows one null key and multiple null values. You can store a key-value pair with a null key and retrieve it successfully.
+
+4. Performance Characteristics: The performance characteristics of LinkedHashMap are similar to HashMap. It offers constant-time performance (O(1)) for basic operations like insertion, retrieval, and removal, on average. However, maintaining the order adds a slight overhead compared to the regular HashMap.
+
+5. Usage: LinkedHashMap is useful in scenarios where maintaining the order of elements is important, such as when you need to iterate over the elements in the same order they were inserted. It can be used when you want a combination of fast access and predictable iteration order.
+
+To create a LinkedHashMap, you can instantiate it using the `LinkedHashMap` class and provide optional parameters like initial capacity, load factor, and access order mode. Here's an example of creating a LinkedHashMap:
+
+```java
+import java.util.LinkedHashMap;
+
+LinkedHashMap<String, Integer> linkedHashMap = new LinkedHashMap<>();
+linkedHashMap.put("Apple", 10);
+linkedHashMap.put("Banana", 5);
+linkedHashMap.put("Orange", 8);
+
+System.out.println(linkedHashMap); // Output: {Apple=10, Banana=5, Orange=8}
+```
+
+In the example, the order of elements in the LinkedHashMap is preserved based on the insertion order.

@@ -1,0 +1,22 @@
+Q2. Differentiate between Collection and collections in the context of Java.
+
+
+
+ANSWER:
+
+
+
+
+In the context of Java, "Collection" and "collections" refer to two different concepts:
+
+1. Collection (with a capital "C"):
+   - Collection (capital "C") refers to the Java interface `java.util.Collection`. It is part of the Java Collections Framework and represents a group of objects known as elements.
+   - The `Collection` interface provides common methods and behaviors for working with collections, such as adding, removing, and retrieving elements.
+   - It serves as the foundation for various collection types like List, Set, and Queue.
+
+2. collections (with a lowercase "c"):
+   - collections (lowercase "c") generally refers to the general concept of multiple objects or elements grouped together.
+   - It is a more generic term that can be used to describe any group or collection of objects, irrespective of the specific implementation or framework being used.
+   - The term "collections" can refer to collections in the broader sense, not necessarily limited to the Java Collections Framework.
+
+In summary, "Collection" refers specifically to the Java interface `java.util.Collection` and represents a group of objects with common methods and behaviors. On the other hand, "collections" is a more general term that describes any group or collection of objects, not limited to the Java Collections Framework.

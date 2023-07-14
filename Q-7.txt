@@ -1,0 +1,31 @@
+Q7.What is the Differentiate between Comparable and Comparator
+
+
+
+
+ANSWER:
+
+
+In Java, both Comparable and Comparator are interfaces used for object comparison, but they differ in terms of usage and implementation. Here are the main differences between Comparable and Comparator:
+
+1. Purpose:
+   - Comparable: The Comparable interface is used for providing a natural ordering of objects. It defines a single method `compareTo()` that allows objects to be compared to one another based on their natural ordering.
+   - Comparator: The Comparator interface is used for providing custom comparison logic between objects. It defines a method `compare()` that allows objects to be compared based on the custom comparison criteria specified by the Comparator implementation.
+
+2. Implementation:
+   - Comparable: The Comparable interface is implemented by the class of the objects being compared. The `compareTo()` method is defined within the class itself, providing the natural ordering of objects.
+   - Comparator: The Comparator interface is implemented by a separate class or provided as an anonymous inner class or lambda expression. The `compare()` method is defined within the Comparator implementation, allowing for custom comparison logic.
+
+3. Object Modification:
+   - Comparable: Implementing Comparable affects the natural ordering of the objects being compared. It provides a default comparison behavior that is consistent across all instances of the class.
+   - Comparator: Using a Comparator allows for custom comparison logic that can be changed or replaced without modifying the class of the objects being compared. Multiple Comparator implementations can be created for different comparison requirements.
+
+4. Object Type:
+   - Comparable: The Comparable interface is used for comparing objects of the same class. It provides a way to define a default ordering for instances of the class.
+   - Comparator: The Comparator interface can be used to compare objects of different classes or to provide custom ordering for objects that already implement Comparable.
+
+5. Usage:
+   - Comparable: The Comparable interface is commonly used when a natural ordering is required or when objects need to be sorted or organized based on their inherent properties. It is used with methods like `sort()` or with sorted collections like TreeSet.
+   - Comparator: The Comparator interface is used when custom or alternative comparison logic is needed, or when objects need to be sorted or organized based on criteria other than their natural ordering. It is often used with methods like `Collections.sort()` or with sorted collections like TreeMap.
+
+In summary, the Comparable interface is used for providing a natural ordering of objects within a class and is implemented by the class itself. The Comparator interface is used for providing custom comparison logic between objects and is implemented by a separate class or provided as an anonymous inner class or lambda expression. Comparable affects the natural ordering of objects, while Comparator allows for multiple custom comparison criteria and flexibility in comparison logic.

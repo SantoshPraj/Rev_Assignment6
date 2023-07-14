@@ -1,0 +1,49 @@
+Q4.Explain the various interfaces used in the Collection framework.
+
+
+
+
+
+ANSWER:
+
+
+
+The Collection framework in Java provides a set of interfaces that define the behavior and operations of different types of collections. These interfaces serve as the building blocks for implementing various collection classes. Here are the key interfaces used in the Collection framework:
+
+1. Collection:
+   - The `java.util.Collection` interface is the root interface of the Collection hierarchy.
+   - It defines the basic methods and behaviors that are common to all collection types.
+   - Some of the methods defined in this interface include `add`, `remove`, `contains`, `size`, `isEmpty`, and `iterator`.
+
+2. List:
+   - The `java.util.List` interface extends the Collection interface and represents an ordered collection (sequence) of elements.
+   - It allows duplicate elements and provides methods to access elements by their index.
+   - Some of the additional methods provided by the List interface include `get`, `set`, `indexOf`, `subList`, and `sort`.
+   - The commonly used classes that implement the List interface are `ArrayList` and `LinkedList`.
+
+3. Set:
+   - The `java.util.Set` interface extends the Collection interface and represents a collection that does not allow duplicate elements.
+   - It ensures that each element is unique based on the `equals` method.
+   - Some of the methods provided by the Set interface include `add`, `remove`, `contains`, `size`, and `isEmpty`.
+   - The commonly used classes that implement the Set interface are `HashSet`, `LinkedHashSet`, and `TreeSet`.
+
+4. Queue:
+   - The `java.util.Queue` interface extends the Collection interface and represents a collection designed for holding elements prior to processing.
+   - It follows the First-In-First-Out (FIFO) order for element retrieval.
+   - Some of the methods provided by the Queue interface include `add`, `remove`, `peek`, `offer`, and `poll`.
+   - The commonly used classes that implement the Queue interface are `LinkedList`, `PriorityQueue`, and `ArrayDeque`.
+
+5. Deque:
+   - The `java.util.Deque` interface extends the Queue interface and represents a double-ended queue that allows element insertion and removal at both ends.
+   - It can be used as both a queue (FIFO) and a stack (LIFO).
+   - Some of the methods provided by the Deque interface include `addFirst`, `addLast`, `removeFirst`, `removeLast`, `getFirst`, and `getLast`.
+   - The commonly used classes that implement the Deque interface are `ArrayDeque` and `LinkedList`.
+
+6. Map:
+   - The `java.util.Map` interface represents a mapping between keys and values, where each key is associated with a unique value.
+   - It does not extend the Collection interface but is an important part of the Collection framework.
+   - It provides methods to put, get, remove, and manipulate key-value pairs.
+   - Some of the methods provided by the Map interface include `put`, `get`, `remove`, `containsKey`, `containsValue`, `keySet`, `values`, and `entrySet`.
+   - The commonly used classes that implement the Map interface are `HashMap`, `LinkedHashMap`, and `TreeMap`.
+
+These interfaces define the common behaviors and operations for different types of collections, allowing for a consistent and unified approach to working with collections in Java. By programming to these interfaces, developers can write flexible and reusable code that can work with various collection implementations interchangeably.
